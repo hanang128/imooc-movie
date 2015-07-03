@@ -1,0 +1,12 @@
+extends ../layout
+
+block content 
+	.container
+		.row
+			form.form-horizontal(method="POST",action="/admin/category")
+				.form-group
+					if category._id
+						input.hidden(type="hidden",name="category[_id]",value="#{category._id}")
+					label(for="inputCategory") 类别名称
+					input#inputGategory.form-control(type="text",name="category[name]" value=category.name)
+					button.btn.btn-success(type="submit") 提交

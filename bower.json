@@ -1,0 +1,15 @@
+{
+  "name": "imooc",
+  "version": "0.0.0",
+  "authors": [
+    "hanang128 <hanang128@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

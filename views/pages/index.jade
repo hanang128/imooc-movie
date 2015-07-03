@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			each cate in categorys
+				.panel.panel-default
+					.panel-heading
+						h3
+							a(href="/results?cate=#{cate._id}&p=1") #{cate.name}
+					.panel-body
+						each movie in cate.movies 
+							.col-md-3
+								.thumbnail
+									a(href ="/movie/#{movie._id}")
+										img(src="#{movie.poster}",alt='#{movie.title}')
+								.caption
+									h3 #{movie.title}
+									p: a.btn.btn-primary(href='/movie/#{movie._id}' role='button') 观看预告片
