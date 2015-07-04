@@ -30,6 +30,8 @@ var half_hour = 3600000 / 2;
 app.use(session({
 	secret:"imooc",
 	store:new MongoStore({mongooseConnection:mongoose.connection}),
+	resave: true, 
+	saveUninitialized: true,
 	cookie:{
 		maxAge:half_hour,
 		secure:false

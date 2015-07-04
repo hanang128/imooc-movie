@@ -20,14 +20,19 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "chai": "^3.0.0",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "gulp": "^3.9.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-mocha": "^2.1.2",
+    "mocha": "^2.2.5"
   },
   "scripts": {
     "bebug": "node --debug app.js",
     "start": "./node_modules/.bin/supervisor app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/gulp test"
   },
   "author": "",
   "license": "ISC"
